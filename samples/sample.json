@@ -1,0 +1,19 @@
+{
+    "image": "AWS_CUSTOMER_ID.dkr.ecr.AWS_REGION.amazonaws.com/YOUR_DOCKER_AT_AWS",
+    "vcpus": 1,
+    "memory": 2048,
+    "volumes": [
+        {
+            "host": {
+                "sourcePath": "/scratch"
+            },
+            "name": "scratch"
+        }
+    ],
+    "mountPoints": [
+        {
+            "containerPath": "/opt/work",
+            "sourceVolume": "scratch"
+        }
+    ]
+}
